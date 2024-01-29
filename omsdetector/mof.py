@@ -141,6 +141,31 @@ class MofStructure(Structure):
         self.write_results(output_folder, verbose)
         os.remove(running_indicator)
 
+    def analyze_metal2(self):
+        self.summary['problematic'] = False
+
+        ms_cs_list = {True: [], False: []}
+        for m, omc in enumerate(self.metal_coord_spheres):
+            m_index = self.metal_indices[m]
+            omc.check_if_open()
+            if not self.summary['problematic']:
+                self.summary['problematic'] = omc.is_problematic
+
+            cs = self._find_coordination_sequence(m_index)
+            cs = [self.species_str[m_index]] + cs
+            omc.is_unique = self._check_if_new_site(ms_cs_list[omc.is_open], cs)
+            if omc.is_unique:
+                ms_cs_list[omc.is_open].append(cs)
+
+            self.summary['metal_sites'].append(omc.metal_summary)
+
+        unique_sites = [s['unique'] for s in self.summary['metal_sites']]
+        open_sites = [s['is_open'] for s in self.summary['metal_sites']]
+
+        self.summary['oms_density'] = sum(unique_sites) / self.volume
+        self.summary['has_oms'] = any(open_sites)
+
+
     def write_results(self, output_folder, verbose='normal'):
         """Store summary dictionary holding all MOF and OMS information to a
         JSON file, store CIF files for the metal and non-metal parts of the MOF
