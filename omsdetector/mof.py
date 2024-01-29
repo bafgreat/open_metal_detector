@@ -1,7 +1,7 @@
 
 import json
 import copy
-from pymatgen import Structure
+from pymatgen.core import Structure
 from omsdetector.atomic_parameters import Atom
 import numpy as np
 import sys
@@ -59,7 +59,7 @@ class MofStructure(Structure):
                         'uc_volume': self.volume,
                         'density': self.density,
                         'date_created': str(todays_date)}
-        
+
         self._tolerance = None
         self._split_structure_to_organic_and_metal()
 

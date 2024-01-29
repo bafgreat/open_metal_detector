@@ -7,7 +7,7 @@ setup(
     install_requires=["pandas>=0.22.0",
                       "matplotlib>=2.1.2",
                       "numpy>=1.14.1",
-                      "pymatgen>=2018.2.13"],
+                      "pymatgen>=2024.1.27"],
     url='',
     license='MIT',
     author='Emmanuel Haldoupis',
