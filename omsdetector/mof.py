@@ -164,6 +164,8 @@ class MofStructure(Structure):
 
         self.summary['oms_density'] = sum(unique_sites) / self.volume
         self.summary['has_oms'] = any(open_sites)
+        print ('Summary', summary)
+        print ("ms_cs_list", ms_cs_list)
 
 
     def write_results(self, output_folder, verbose='normal'):

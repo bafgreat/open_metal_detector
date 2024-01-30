@@ -12,8 +12,8 @@ The first step is to create a collection containing all the desired CIF files. W
 this by pointing to a folder containing the CIF files.
 
 ```
-from omsdetector import MofCollection 
-mof_coll = MofCollection.from_folder(collection_folder="path to cif folder", 
+from omsdetector import MofCollection
+mof_coll = MofCollection.from_folder(collection_folder="path to cif folder",
                                      analysis_folder="path to analysis folder")
 ```
 
@@ -38,7 +38,7 @@ mof_coll.summarize_tfactors()
 
 The summarize_results() method generates a table that summarizes the number of open metal sites found for each metal type.
 The summarize_tfactors() method generates histograms (and stores them) for the distribution of the t-factors, which indicate
-the degree of deviation from a closed coordination sphere for tetra, penta, and hexa-coordinated coordination spheres. 
+the degree of deviation from a closed coordination sphere for tetra, penta, and hexa-coordinated coordination spheres.
 
 Finaly, a collection can be filtered to create a sub-collection using the following filters:
 
@@ -59,10 +59,10 @@ co_oms = mof_coll.filter_collection(using_filter={"metal_species":["Co"], "has_o
 See the example jupyter notebook for more details.
 
 ## Requirments
-* python 3.6.3
-* pymatgen  2018.2.13
-* pandas 0.22.0
-* numpy 1.14.1
+* python >=3.9
+* pymatgen 2024.1.27
+* pandas 1.3.5
+* numpy 1.21.6
 * matplotlib 2.1.1
 
 ## Reference

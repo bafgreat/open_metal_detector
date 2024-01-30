@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='open_metal_detector',
-    version='2018.12.3',
+    version='2024.01.29',
     packages=['omsdetector'],
     install_requires=["pandas>=0.22.0",
                       "matplotlib>=2.1.2",
@@ -13,5 +13,5 @@ setup(
     author='Emmanuel Haldoupis',
     author_email='emmhald@gmail.com',
     description='A tool to detect open metal sites in collections of MOFs.',
-    python_requires='>=3'
+    python_requires='>=3.9'
 )
