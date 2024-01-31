@@ -12,7 +12,7 @@ The first step is to create a collection containing all the desired CIF files. W
 this by pointing to a folder containing the CIF files.
 
 ```
-from omsdetector import MofCollection
+from omsdetector-forked import MofCollection
 mof_coll = MofCollection.from_folder(collection_folder="path to cif folder",
                                      analysis_folder="path to analysis folder")
 ```
@@ -60,7 +60,7 @@ See the example jupyter notebook for more details.
 
 ## Requirments
 * python >=3.9
-* pymatgen 2024.1.27
+* pymatgen >=2023.2.28
 * pandas 1.3.5
 * numpy 1.21.6
 * matplotlib 2.1.1

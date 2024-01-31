@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "omsdetector_forked"
+version = "2024.01.31"
+description = "Forked omsdetector to make it compliant with current python versions and dependencies"
+authors = ["Dinga Wonanke"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = ">=1.3.5"
+matplotlib = ">=2.1.2"
+numpy = ">=1.21.6"
+pymatgen = ">=2023.2.28"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

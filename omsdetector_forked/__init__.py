@@ -1,0 +1,1 @@
+from omsdetector_forked.mof_collection import MofCollection
