@@ -5,3 +5,9 @@ output*
 analysis
 *.out
 .idea/
+.DS_Store
+.pyenv/
+.vscode/
+poetry.lock
+.history/
+dist/
