@@ -59,11 +59,11 @@ co_oms = mof_coll.filter_collection(using_filter={"metal_species":["Co"], "has_o
 See the example jupyter notebook for more details.
 
 ## Requirments
+
 * python >=3.9
 * pymatgen >=2023.2.28
-* pandas 1.3.5
-* numpy 1.21.6
-* matplotlib 2.1.1
+* pandas = >=1.3.5
+* matplotlib >= 2.1.1
 
 ## Reference
 
