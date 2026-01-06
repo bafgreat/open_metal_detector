@@ -1,16 +1,15 @@
 [tool.poetry]
 name = "omsdetector_forked"
-version = "2024.11.13"
+version = "2026.01.06"
 description = "Forked omsdetector to make it compliant with current python versions and dependencies"
 authors = ["Dinga Wonanke"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.9"
+python = ">=3.9,<4.0"
 pandas = ">=1.3.5"
 matplotlib = ">=2.1.2"
-numpy = ">=1.21.6 <2.0"
-pymatgen = ">=2024.2.20"
+pymatgen = ">2024.2.20"
 
 
 [build-system]
